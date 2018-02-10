@@ -31,5 +31,3 @@ matchedTutors = newuser.UserModel.query().fetch()
         matchedRoommates.sort(key=lambda roommate: roommate.score, reverse = True)
 ##This takes out the user trying to find a roommate from the list of options
         matchedRoommates= matchedRoommates[1:
-
-    
