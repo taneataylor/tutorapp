@@ -13,7 +13,7 @@ app = webapp2.WSGIApplication([
 	('/studentsignup',studentsignup_handler.StudentSignUpHandler),
 	('/tutornotifs', tutornotifs_handler.TutorNotifsHandler),
 	('/tutorsubjects', tutorsubjects_handler.TutorSubjectsHandler),
-	('studentmatch', studentmatch_handler.StudentMatchHandler),
+	('/studentmatch', studentmatch_handler.StudentMatchHandler),
 	('/studentrequest', studentrequest_handler.StudentRequestHandler),
 
 ], debug=True)
