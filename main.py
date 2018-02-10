@@ -19,7 +19,7 @@ app = webapp2.WSGIApplication([
 	('/homestudent',homestudent_handler.HomeStudentHandler),
 	('/tutorsignup',tutorsignup_handler.TutorSignUpHandler),
 	('/studentsignup',studentsignup_handler.StudentSignUpHandler),
-	('/tutornotifs', tutornotifs_handler.TutorNotifsHandler),
+	#('/tutornotifs', tutornotifs_handler.TutorNotifsHandler),
 	#('/tutorsubjects', tutorsubjects_handler.TutorSubjectsHandler),
 	('/studentmatch', studentmatch_handler.StudentMatchHandler),
 	('/studentrequest', studentrequest_handler.StudentRequestHandler),
