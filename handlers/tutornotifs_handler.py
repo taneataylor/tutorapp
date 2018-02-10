@@ -2,9 +2,7 @@ import jinja_env
 import logging
 import webapp2
 
-
-
-class HomeTutorHandler(webapp2.RequestHandler):
+class TutorNotifsHandler(webapp2.RequestHandler):
     def get(self):
     	logging.info("MainHandler")
 
