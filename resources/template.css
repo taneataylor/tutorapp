@@ -3,6 +3,7 @@
     font-family: 'Cookie', cursive;
 }
 
+<<<<<<< HEAD
 .row{
   background-color: #397A99
 }
@@ -26,6 +27,13 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+=======
+body {
+	
+	background-color: #FFFFFF; 
+	text-align: center;
+	color: #397A99;
+>>>>>>> 8b677b20402ddd247f52602c71668b6c6eb57123
 }
 
 .dropdown-content a {
@@ -37,6 +45,7 @@
 
 .dropdown-content a:hover {background-color: #ddd}
 
+<<<<<<< HEAD
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -54,3 +63,17 @@ body {
 }
 
 
+=======
+	
+
+h1 {
+    text-align: center;
+    color: #397A99;
+  }
+  form {
+    color: #397A99;
+    text-align: center;
+  }
+
+ 
+>>>>>>> 8b677b20402ddd247f52602c71668b6c6eb57123
