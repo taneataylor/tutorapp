@@ -1,8 +1,10 @@
-
+<!DOCTYPE html>
+<html>
 <head>
+<title>Home for Tutors</title>
 <link rel="stylesheet" type="text/css" href="resources/hometutor.css">
 <link rel="stylesheet" type="text/css" href="resource/template.css"
- <meta charset="utf-8">
+  <meta charset="utf-8"> charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Cookie|Courgette|Dancing+Script" rel="stylesheet">
@@ -11,7 +13,6 @@
 </head>
 <br></br>
 
-<title>Home for Tutors</title>
 
 <nav class="navbar sticky-top navbar-light bg-light">
   <a class="navbar-brand" href="#"> </a>
@@ -46,8 +47,6 @@
 </div>
 
 <br></br>
-
-<html>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -101,6 +100,22 @@
 </style>
 </head>
 <body>
+
+{{ html_item }}
+
+<form method="POST">
+  <p>Enter Item(placeholder)</p>
+    <input name="form_subject"></input>
+  <p>Enter Item(placeholder)</p>
+    <input name="form_day"></input>
+  <p>Enter Item(placeholder)</p>
+    <input name="form_time"></input>
+  <br/>
+  <br/>
+  <textarea name="form_price" placeholder="Description of item here..."></textarea>
+  <br/>
+  <input type="submit"/>
+</form>
 
 <div class= "row" align = "center" b>
   <div class="col-sm-2" text-align = "left">
