@@ -31,7 +31,7 @@ class StudentRequestHandler(webapp2.RequestHandler):
         logging.info(r_price)
 
 
-        new_user = newuser.UserModel(
+        new_user = newuser.TutorModel(
             whichsubject = r_subject,
             whichday = r_day,
             whichtime = r_time,
