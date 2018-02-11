@@ -13,7 +13,7 @@ class HomeTutorHandler(webapp2.RequestHandler):
 
 
 
-        template = jinja_env.env.get_template('templates/studentrequest.html')
+        template = jinja_env.env.get_template('templates/hometutor.html')
         self.response.out.write(template.render())
     
     def post(self):
