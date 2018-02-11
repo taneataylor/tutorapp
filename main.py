@@ -16,7 +16,7 @@ jinja_env.init(os.path.dirname(__file__))
 
 app = webapp2.WSGIApplication([
 	('/', main_handler.MainHandler),
-	('/tutororstudent', tutorOrstudent_handler.TutorOrStudentHandler),
+	('/tutororstudent', tutororstudent_handler.TutorOrStudentHandler),
 	('/hometutor',hometutor_handler.HomeTutorHandler),
 	('/homestudent',homestudent_handler.HomeStudentHandler),
 	('/tutorsignup',tutorsignup_handler.TutorSignUpHandler),
