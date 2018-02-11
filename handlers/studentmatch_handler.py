@@ -32,3 +32,5 @@ class StudentMatchHandler(webapp2.RequestHandler):
        ## matchedRoommates.sort(key=lambda roommate: roommate.score, reverse = True)
 ##This takes out the user trying to find a roommate from the list of options
      ##   matchedRoommates= matchedRoommates[1:
+        template = jinja_env.env.get_template('templates/studentmatch.html')
+        self.response.out.write(template.render())

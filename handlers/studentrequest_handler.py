@@ -13,7 +13,8 @@ class StudentRequestHandler(webapp2.RequestHandler):
 
 
 
-
+        template = jinja_env.env.get_template('templates/studentrequest.html')
+        self.response.out.write(template.render())
     def post(self):
         user = users.get_current_user()
         if user == None:
@@ -36,4 +37,5 @@ class StudentRequestHandler(webapp2.RequestHandler):
             whichprice = r_price
         )
         new_user.put()
-        elf.redirect("/studentmatch")
+        self.redirect("/studentmatch")
+        
