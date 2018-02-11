@@ -7,9 +7,9 @@ from google.appengine.api import users
 
 from models import newuser
 
-class studentRequestHandler(webapp2.RequestHandler):
-	def get(self):
-		user = users.get_current_user()
+class StudentRequestHandler(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
 
 
 

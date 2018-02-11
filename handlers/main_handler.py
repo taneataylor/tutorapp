@@ -11,8 +11,8 @@ class MainHandler(webapp2.RequestHandler):
 		logging.info(users.get_current_user())
 		logging.info(users.create_login_url('/hometutor'))
 		logging.info(users.create_login_url('/homestudent'))
-			html_params = {
-            "title": "Main Title",
+		html_params = {
+        	"title": "Main Title",
             "content": "Hello"
         }
 
