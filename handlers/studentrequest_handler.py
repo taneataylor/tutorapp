@@ -19,10 +19,10 @@ def post(self):
         if user == None:
             self.redirect("/")
             return
-		r_subject = self.request.get("subject")
-        r_day = self.request.get("day")
-        r_time = self.request.get("time")
-        r_price = self.request.get("price")
+	r_subject = self.request.get("subject")
+    ##r_day = self.request.get("day")
+    ##r_time = self.request.get("time")
+    ##r_price = self.request.get("price")
         
 
 
