@@ -8,23 +8,22 @@ from models import newuser
 
 class StudentMatchHandler(webapp2.RequestHandler):
     def get(self):
-        logging.info("MainHandler")
         user = users.get_current_user()
         if user == None: 
             self.redirect("/")
             return
         myUser = newuser.UserModel.query(newuser.UserModel.user_email == user.email()).get()
-
-        new_user = "div" + "Here are tutors that can help you with " + str(myUser.subject) + " on " + str(myUser.day) + " at " + str(myUser.time) + "div"
+        #logging.info(myUser)
+        new_user = "<div>" + "Here are tutors that can help you with " + str(myUser.whichsubject) + " on " + str(myUser.whichday) + " at " + str(myUser.whichtime) + "div"
 
         matchedTutors = newuser.UserModel.query().fetch()
         for match in matchedTutors:
             score = 0
-            if match.subject == myUser.subject:
+            if match.whichsubject == myUser.whichsubject:
                 score = score + 1
-            if match.day == myUser.day:
-                score = score + 1
-            if match.time == myUser.time:
+            if match.whichday == myUser.whichday:
+               score = score + 1
+            if match.whichtime == myUser.whichtime:
                 score = score + 1
 
                 match.score = score
@@ -36,7 +35,8 @@ class StudentMatchHandler(webapp2.RequestHandler):
 
         match_str = ""
         for match in matchedTutors:
-            match_str += "<div> Compatibility Score: " + str(match.score) + "<br>" + "<b>" + str(match.form_first) + " " + str(match.form_last) + ", " + str(match.age) + "</b>" + "Email: " + str(match.user_email) + "<br>"
+            logging.info(match)
+            match_str += "<div> Tutors: " + str(match.whichsubject) + " " + str(match.whichday) + "Email: " + str(match.user_email) 
             match_str+= "</div>"
 
         template = jinja_env.env.get_template('templates/studentmatch.html')
