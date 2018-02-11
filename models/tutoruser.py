@@ -5,3 +5,4 @@ class TutorModel(ndb.Model):
     whichday = ndb.StringProperty()
     whichtime = ndb.StringProperty()
     whichprice = ndb.StringProperty()
+    user_email = ndb.StringProperty()
