@@ -35,7 +35,8 @@ class HomeTutorHandler(webapp2.RequestHandler):
             whichsubject = r_subject,
             whichday = r_day,
             whichtime = r_time,
-            whichprice = r_price
+            whichprice = r_price,
+            user_email = user.email()
         )
         new_user.put()
         self.redirect("/studentmatch")
