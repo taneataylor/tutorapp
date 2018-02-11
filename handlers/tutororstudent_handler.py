@@ -12,8 +12,8 @@ class TutorOrStudentHandler(webapp2.RequestHandler):
         logging.info(users.create_login_url('/hometutor'))
         logging.info(users.create_login_url('/studentrequest'))
         html_params = {
-            "html_login":users.create_login_url('/hometutor'),
-            "html_login2":users.create_login_url('/studentrequest'),
+            "html_login":users.create_login_url('/tutorsignup'),
+            "html_login2":users.create_login_url('/studentsignup'),
         
         }
 
