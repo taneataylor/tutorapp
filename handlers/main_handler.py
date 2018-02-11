@@ -17,7 +17,10 @@ class MainHandler(webapp2.RequestHandler):
             "html_login":users.create_login_url('/hometutor'),
             "html_login2":users.create_login_url('/studentrequest')
         }
-		
+
+
+		user = user.get_current_user()
+
 		template = jinja_env.env.get_template('templates/tmpl.html')
 		self.response.out.write(template.render(html_params))
 		
