@@ -10,6 +10,17 @@ from google.appengine.api import users
 class HomeTutorHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
+<<<<<<< HEAD
+=======
+
+
+
+        template = jinja_env.env.get_template('templates/hometutor.html')
+        self.response.out.write(template.render())
+    
+    def post(self):
+        user = users.get_current_user()
+>>>>>>> b20a198a99208bfc4b314c4dbf9803ae7b046368
         if user == None:
             self.redirect("/")
             return
@@ -45,11 +56,20 @@ class HomeTutorHandler(webapp2.RequestHandler):
         logging.info(r_price)
 
 
+<<<<<<< HEAD
         output = newuser.NewUser(
             user_whichsubject = r_subject,
             user_whichday = r_day,
             user_whichtime = r_time,
             user_whichprice = r_price
+=======
+        new_user = newuser.UserModel(
+            whichsubject = r_subject,
+            whichday = r_day,
+            whichtime = r_time,
+            whichprice = r_price,
+            user_email = user.email()
+>>>>>>> b20a198a99208bfc4b314c4dbf9803ae7b046368
         )
         output.put()
         self.redirect("/studentmatch")
