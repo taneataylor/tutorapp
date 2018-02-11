@@ -2,20 +2,26 @@
 
 <img src="grasplogo.jpg" alt="Logo" height="600" width="" class="center">
 <body>
-	
-	<form action="tutororstudent.html" >
-		<button class="button" type="submit" style= "text-allign: center;"> <span>Signup</span></button>
-	</form>
-	<form action="homestudent.html">
-		<button class= "button" type="submit" style="text-allign: center;"> <span>Login</span></button>
-	</form>
+  
+  <form action="tutororstudent.html" >
+    <!--<button class="button" type="submit" style= "text-allign: center;"> <span>Signup</span></button>
+  </form>-->
+  <input type="submit" value="Sign Up">
+  <form action="homestudent.html">
+    <!--<button class= "button" type="submit" style="text-allign: center;"> <span>Login</span></button>-->
+    <input type="submit" value="Login">
+  </form>
 <style>
 body {background-color: #FFFFFF;}
+<<<<<<< HEAD
+
+=======
+>>>>>>> b45d7944c9ef47e58438fe3a8268374a4055dde4
 form {
-	text-align: center;
+  text-align: center;
 }
 
-.button {
+input {
   display: block; 
   border-radius: 4px;
   background-color: #397A99;
@@ -30,14 +36,14 @@ form {
   margin: 5px;
 }
 
-.button span {
+input span {
   cursor: pointer;
   display: block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+input span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -46,11 +52,11 @@ form {
   transition: 0.5s;
 }
 
-.button:hover span {
+input:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+input:hover span:after {
   opacity: 1;
   right: 0;
 }
@@ -67,5 +73,3 @@ form {
 </html>
 
 
-
-</html>

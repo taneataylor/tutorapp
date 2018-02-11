@@ -15,7 +15,11 @@ class StudentMatchHandler(webapp2.RequestHandler):
             self.redirect("/")
             return
         myUser = tutoruser.UserModel.query(newuser.UserModel.user_email == user.email()).get()
+<<<<<<< HEAD
         new_user = "div" + "Here are tutors that can help you with " + str(myUser.subject) + " on " + str(myUser.day) + " at " + str(myUser.time) + "div"
+=======
+        new_user = "Here are tutors that can help you with " + str(myUser.subject) + " on " + str(myUser.day) + " at " + str(myUser.time)
+>>>>>>> 26ed5cda8168c9bbe0be4fc4187b9e339713a491
 
         matchedTutors = tutoruser.UserModel.query().fetch()
         for match in matchedTutors:
