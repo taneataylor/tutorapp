@@ -2,76 +2,47 @@ import jinja_env
 import logging
 import webapp2
 
-from models import newuser
-from models import tutoruser
 from google.appengine.api import users
+from models import newuser
 
 
 class HomeTutorHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
-
-
-
-        template = jinja_env.env.get_template('templates/hometutor')
-        self.response.out.write(template.render())
-    
-    def post(self):
-        user = users.get_current_user()
-        if user == None:
+        if user == None: 
             self.redirect("/")
             return
+        myUser = newuser.UserModel.query(newuser.UserModel.user_email == user.email()).get()
+        #logging.info(myUser)
+        new_user = "div" + "Here are tutors that can help you with " + str(myUser.whichsubject) + " on " + str(myUser.whichday) + " at " + str(myUser.whichtime) + "div"
 
-        r_subject = self.request.get("whichsubject")
-        r_day = self.request.get("whichday")
-        r_time = self.request.get("whichtime")
-        r_price = self.request.get("whichprice")
+        matchedTutors = newuser.UserModel.query().fetch()
+        for match in matchedTutors:
+            score = 0
+            if match.whichsubject == myUser.whichsubject:
+                score = score + 1
+            if match.whichday == myUser.whichday:
+               score = score + 1
+            if match.whichtime == myUser.whichtime:
+                score = score + 1
 
-        logging.info("HomeTutorHandler")
-        logging.info(users.get_current_user())
-        items = tutoruser.TutorUser.query().fetch()
-        student = newuser.NewUser.query(user.email()==newuser.NewUser.student_email).get()
-        
-        user_str = ""
-        for item in items:
-            user_str += "<div>"
-            user_str += "<h3>Item : " + item.student_whichsubject + "</h3>"
-            user_str += "<p>" + item.student_whichday + "</p>"
-            user_str += "</div>"
+                match.score = score
 
-        html_params = {
-            "title": "Main Title",
-            "html_item": user_str,
-            "user_name": student.student_name,
-        }
+##This sorts the users from highest compatability to lowest
+        matchedTutors.sort(key=lambda tutor: tutor.score, reverse = True)
+##This takes out the user trying to find a roommate from the list of options
+        matchedTutors= matchedTutors[1:]
 
-        template = jinja_env.env.get_template('templates/hometutor.html')
-        self.response.out.write(template.render(html_params))
-    
-    def post(self):
-        r_subject = self.request.get("form_subject")
-        r_day = self.request.get("form_day")
-        r_time = self.request.get("form_time")
-        r_price = self.request.get("form_price")
+        match_str = ""
+        for match in matchedTutors:
+            logging.info(match)
+            match_str += "<div> Tutors Email: " + str(match.whichsubject) + " " + str(match.whichday)  + str(match.user_email) 
+            match_str+= "</div>"
 
-        logging.info(r_subject)
-        logging.info(r_day)
-        logging.info(r_time)
-        logging.info(r_price)
-
-
-        output = newuser.NewUser(
-            user_whichsubject = r_subject,
-            user_whichday = r_day,
-            user_whichtime = r_time,
-            user_whichprice = r_price
-        )
-        # new_user = newuser.UserModel(
-        #     whichsubject = r_subject,
-        #     whichday = r_day,
-        #     whichtime = r_time,
-        #     whichprice = r_price,
-        #     user_email = user.email()
-        # )
-        output.put()
-        self.redirect("/studentmatch")
+        template = jinja_env.env.get_template('templates/studentmatch.html')
+        parajo = {
+            "html_userObject": match_str,
+            "html_info": new_user,
+            "html_email" : user.email()
+            }
+        self.response.out.write(template.render(parajo))
