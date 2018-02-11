@@ -1,7 +1,7 @@
-
 import jinja_env
 import logging
 import webapp2
+
 from google.appengine.api import users
 from models import newuser
 
@@ -14,7 +14,7 @@ class StudentMatchHandler(webapp2.RequestHandler):
             return
         myUser = newuser.UserModel.query(newuser.UserModel.user_email == user.email()).get()
         #logging.info(myUser)
-        new_user = "<div>" + "Here are tutors that can help you with " + str(myUser.whichsubject) + " on " + str(myUser.whichday) + " at " + str(myUser.whichtime) + "div"
+        new_user = "div" + "Here are tutors that can help you with " + str(myUser.whichsubject) + " on " + str(myUser.whichday) + " at " + str(myUser.whichtime) + "div"
 
         matchedTutors = newuser.UserModel.query().fetch()
         for match in matchedTutors:
