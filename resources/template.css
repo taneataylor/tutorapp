@@ -1,13 +1,22 @@
-<html>
-	<head>
-		<title>Sign Up</title>
-		<link rel="stylesheet" type="text/css" href="template.css">
-	</head>
 
 
-	<style>
 
-	h1 {
+bckgrd {
+	color: #coral;
+}
+
+body {
+	
+	background-color: #FFFFFF; 
+	text-align: center;
+	color: #397A99;
+}
+
+form {
+	text-align: center;
+}
+
+h1 {
 		text-align: center;
 		color: #397A99;
 	}
@@ -60,18 +69,3 @@ button:hover span:after {
   opacity: 1;
   right: 0;
 }
-	</style>
-	<body>
-		<h1><em>Create your profile</em></h1>
-		<form method = "POST" action="studentrequest.html">
-			Student Name: <input type="text" name="name"><br>
-			<br>	Email Adress: <input type="text" name="userEmail"><br>
-			<br>	Phone Number: <input type="text" name="userNumber"><br>
-			<br>	School: <input type="text" name="userSchool"><br>
-			<br>	Classification: <input type="text" name="userClassification"><br>
-			<!--<br> <input type="submit" value="Continue">-->
-			<!--<button type="button" class="btn btn-outline-success">-->
-				<button type="submit">Continue</button>
-		</form>	
-	</body>
-</html>
