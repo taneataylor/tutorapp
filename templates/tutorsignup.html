@@ -3,6 +3,61 @@
 		<!--<link rel="stylesheet" href="/resources/sign_up.css">
 		<title>Sign Up</title>-->
 	</head>
+	<style>
+	h1 {
+		text-align: center;
+		color: #397A99;
+	}
+	form {
+		color: #397A99;
+		text-align: center;
+	}
+
+	button {
+    margin-top:167px;
+    width:1024px;
+    height:34px;
+}
+	button {
+  display: block; 
+  border-radius: 2px;
+  background-color: #397A99;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+button span {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 12.5px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+	</style>
 	<body>
 		<h1><em>Create your profile</em></h1>
 		<form method = "POST" action="hometutor.html">
@@ -10,8 +65,8 @@
 			<br>	Email Adress: <input type="text" name="userEmail"><br>
 			<br>	Phone Number: <input type="number" name="userNumber"><br>
 			<br>	Subjects: <input type="text" name="userSchool"><br>
-			<br>	Price: <input type="text" name="userPrice"><br>
-			<br> 	Mobility: <input type="text" name="userMobility"><br>
+			<br>	Price (per hour): <input type="text" name="userPrice"><br>
+			<br> 	Mobility (day/time): <input type="text" name="userMobility"><br>
 			<!--<br> <input type="submit" value="Continue">-->
 			<!--<button type="button" class="btn btn-outline-success">-->
 				<button type="submit">Sign Up!</button>
