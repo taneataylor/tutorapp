@@ -1,58 +1,15 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <title>Tutor or Student</title>
+      <link rel="stylesheet" type="text/css" href="resources/template.css">
+</head>
 <body>
-	
-	<form action="studentsignup.html" >
-		<button class="button" type="submit" style= "text-allign: center;"> <span> Student</span></button>
-	</form>
-	<form action="tutorsignup.html">
-		<button class= "button" type="submit" style="text-allign: center;"> <span> Tutor</span></button>
-	</form>
-<style>
+<div class = "bckgrd">
 
-form {
-	text-align: center;
-}
+<button class="button"><a href="{{ html_login }}" style="text-decoration: none; color: #397A99">Tutor </a></button>
+<button class="button"><a href="{{ html_login2 }}" style="text-decoration: none; color: #397A99">Student</a></button>
 
-.button {
-  display: block; 
-  border-radius: 4px;
-  background-color: #397A99;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-</style>
 </body>
-
 </html>
+

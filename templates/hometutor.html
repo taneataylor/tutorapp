@@ -1,9 +1,11 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="resources/hometutor.css">
+<link rel="stylesheet" type="text/css" href="resource/template.css"
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cookie|Courgette|Dancing+Script" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -20,7 +22,16 @@
   
            Home
         </a>
+      
         <a class = "navbar-brand" href = "home.html" crossorigin="anonymous">
+  
+           Student 
+        </a>
+        <a class = "navbar-brand" href = "hometutor.html" crossorigin="anonymous">
+  
+           Tutor
+        </a>
+        <a class = "navbar-brand" href = "tutororstudent.html" crossorigin="anonymous">
   
             Log Out
 
@@ -31,7 +42,7 @@
 
 
 <div>
-  <h3> Choose Subject and Availability: </h3>
+  <h2 class="choose" align="center"> Choose Your Tutoring Subject and Availability: </h2>
 </div>
 
 <br></br>
@@ -40,8 +51,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+
+.choose{
+    font-family: 'Cookie', cursive;
+}
+
+.row{
+  background-color: #397A99
+}
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #397A99;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -82,19 +102,22 @@
 </head>
 <body>
 
-<div class= "row">
-  <div class="col-sm-3" align = "left">
+<div class= "row" align = "center" b>
+  <div class="col-sm-2" text-align = "left">
 <h2></h2>
 <div class="dropdown">
   <button class="dropbtn">Subjects</button>
   <div class="dropdown-content">
     <a href="#">Biology</a>
     <a href="#">Calculus</a>
+    <a href="#">Chemistry</a>
     <a href="#">English</a>
+    <a href="#">Physics</a>
+    <a href="#">Spanish</a>
   </div>
 </div>
 </div>
-<div class="col-sm-3" align = "center">
+<div class="col-sm-2" text-align = "left">
 <h2></h2>
 <div class="dropdown">
   <button class="dropbtn">Day</button>
@@ -109,7 +132,7 @@
   </div>
 </div>
 </div>
-<div class="col-sm-3" align="right">
+<div class="col-sm-2" text-align="left">
 <h2></h2>
 <div class="dropdown">
   <button class="dropbtn">Time</button>
@@ -138,6 +161,18 @@
     <a href="#">9:00 pm </a>
     <a href="#">10:00 pm </a>
     <a href="#">11:00 pm </a>
+  </div>
+</div>
+</div>
+<div class="col-sm-2" text-align="center">
+<h2></h2>
+<div class="dropdown">
+  <button class="dropbtn">Price Range</button>
+  <div class="dropdown-content" align="left">
+    <a href="#">$5-$10/hr</a>
+    <a href="#">$11-$20/hr </a>
+    <a href="#">$21-$30/hr </a>
+    
   </div>
 </div>
 </div>
