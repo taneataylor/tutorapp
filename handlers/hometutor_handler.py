@@ -21,10 +21,10 @@ class HomeTutorHandler(webapp2.RequestHandler):
         if user == None:
             self.redirect("/")
             return
-        r_subject = self.request.get("subject")
-        r_day = self.request.get("day")
-        r_time = self.request.get("time")
-        r_price = self.request.get("price")
+        r_subject = self.request.get("whichsubject")
+        r_day = self.request.get("whichday")
+        r_time = self.request.get("whichtime")
+        r_price = self.request.get("whichprice")
         logging.info(r_subject)
         logging.info(r_day)
         logging.info(r_time)
