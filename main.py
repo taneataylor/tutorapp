@@ -8,7 +8,6 @@ from handlers import hometutor_handler
 from handlers import homestudent_handler
 from handlers import tutorsignup_handler
 from handlers import studentsignup_handler
-from handlers import tutornotifs_handler
 from handlers import studentmatch_handler
 from handlers import studentrequest_handler
 
