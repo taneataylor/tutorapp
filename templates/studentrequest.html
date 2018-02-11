@@ -1,182 +1,7 @@
 
-<head>
-<link rel="stylesheet" type="text/css" href="resources/hometutor.css">
-<link rel="stylesheet" type="text/css" href="resource/template.css">
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Cookie|Courgette|Dancing+Script" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
-<style>
-.choose{
-    font-family: 'Cookie', cursive;
-}
-
-.row{
-  background-color: #397A99
-}
-.dropbtn {
-    background-color: #397A99;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-</style>
-
-
-<body>
-<nav class="navbar sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="#"> </a>
-    <nav class= "navbar navbar-light">
-        <img src="grasplogo.jpg" width = "40" height = "40" align = "left">
-        
-        <a class = "navbar-brand" href = "tmpl.html" crossorigin="anonymous">
-  
-           Home
-        </a>
-      
-        <a class = "navbar-brand" href = "studentsignup.html" crossorigin="anonymous">
-  
-           Student 
-        </a>
-        <a class = "navbar-brand" href = "tutorsignup.html" crossorigin="anonymous">
-  
-           Tutor
-        </a>
-        <a class = "navbar-brand" href = "tmpl.html" crossorigin="anonymous">
-  
-            Log Out
-
-        </a>
-
-    </nav>
-</nav>
-
-
-<div>
-  <h2 class="choose" align="center"> Choose the Subject In Which You Need Assistance and Your Availability: </h2>
-</div>
-
-
-
-<div class= "row" align = "center" >
-  <div class="col-sm-2" text-align = "left">
-<h2></h2>
-<div class="dropdown">
-  <button class="dropbtn">Subjects</button>
-  <div class="dropdown-content">
-    <a href="#">Biology</a>
-    <a href="#">Calculus</a>
-    <a href="#">Chemistry</a>
-    <a href="#">English</a>
-    <a href="#">Physics</a>
-    <a href="#">Spanish</a>
-  </div>
-<<<<<<< HEAD
-</div>
-</div>
-<div class="col-sm-2" text-align = "left">
-<h2></h2>
-<div class="dropdown">
-  <button class="dropbtn">Day</button>
-  <div class="dropdown-content">
-    <a href="#">Monday</a>
-    <a href="#">Tuesday</a>
-    <a href="#">Wednesday</a>
-    <a href="#">Thursday</a>
-    <a href="#">Friday</a>
-    <a href="#">Saturday</a>
-    <a href="#">Sunday</a>
-  </div>
-</div>
-</div>
-            <div class="col-sm-2" text-align="left">
-              <h2>
-                <div class="dropdown">
-                    <button class="dropbtn">Time</button>
-                      <div class="dropdown-content">
-                          <a href="#">12:00 am</a>
-                          <a href="#">1:00 am </a>
-                          <a href="#">2:00 am </a>
-                          <a href="#">3:00 am </a>
-                          <a href="#">4:00 am </a>
-                          <a href="#">5:00 am </a>
-                          <a href="#">6:00 am </a>
-                          <a href="#">7:00 am</a>
-                          <a href="#">8:00 am </a>
-                          <a href="#">9:00 am </a>
-                          <a href="#">10:00 am </a>
-                          <a href="#">11:00 am </a>
-                          <a href="#">12:00 pm </a>
-                          <a href="#">1:00 pm </a>
-                          <a href="#">2:00 pm </a>
-                          <a href="#">3:00 pm </a>
-                          <a href="#">4:00 pm </a>
-                          <a href="#">5:00 pm </a>
-                          <a href="#">6:00 pm </a>
-                          <a href="#">7:00 pm</a>
-                          <a href="#">8:00 pm </a>
-                          <a href="#">9:00 pm </a>
-                          <a href="#">10:00 pm </a>
-                          <a href="#">11:00 pm </a>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="col-sm-2" text-align="center">
-                </h2>
-      <div class="dropdown">
-          <button class="dropbtn">Price Range</button>
-              <div class="dropdown-content" align="left">
-                    <a href="#">$5-$10/hr</a>
-                    <a href="#">$11-$20/hr </a>
-                    <a href="#">$21-$30/hr </a>
-    
-              </div>
-          </div>
-      </div>
-    </div>
-</body>
-
-
+<form method = "POST">
 </html>
-=======
-  <select name="whichsubject">
+ <select name="whichsubject">
   <option value="bio">Biology</option>
   <option value="calc">Calculus</option>
   <option value="chem">Chemistry</option>
@@ -225,6 +50,12 @@
   <option value="11pm">11pm</option>
   
 </select>
+<input type = "Submit">
+
+{{html_info}}
+
+</form>
+</body>
 
 
 <h2>What is your price range?</h2>
@@ -235,4 +66,3 @@
 <input type = "Submit">
 {{html_info}}
 </form></body>
->>>>>>> e83aa93d6cd2c90dea33c7c85a2f7b39c6b312e7
