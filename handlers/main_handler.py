@@ -15,7 +15,9 @@ class MainHandler(webapp2.RequestHandler):
         	##"title": "Main Title",
             #"content": "Hello"
             "html_login":users.create_login_url('/hometutor'),
-            "html_login2":users.create_login_url('/studentrequest')
+            "html_login2":users.create_login_url('/studentrequest'),
+            "html_login3":users.create_login_url('/tutororstudent'),
+        
         }
 
 
