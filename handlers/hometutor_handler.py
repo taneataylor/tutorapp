@@ -21,6 +21,12 @@ class HomeTutorHandler(webapp2.RequestHandler):
         if user == None:
             self.redirect("/")
             return
+<<<<<<< HEAD
+        r_subject = self.request.get("whichsubject")
+        r_day = self.request.get("whichday")
+        r_time = self.request.get("whichtime")
+        r_price = self.request.get("whichprice")
+=======
         logging.info("HomeTutorHandler")
         logging.info(users.get_current_user())
         items = tutoruser.TutorUser.query().fetch()
@@ -47,6 +53,7 @@ class HomeTutorHandler(webapp2.RequestHandler):
         r_day = self.request.get("form_day")
         r_time = self.request.get("form_time")
         r_price = self.request.get("form_price")
+>>>>>>> bb18601de1b6597cfc1560df3359c6362c98b92a
         logging.info(r_subject)
         logging.info(r_day)
         logging.info(r_time)

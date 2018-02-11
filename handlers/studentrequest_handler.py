@@ -27,10 +27,10 @@ class StudentRequestHandler(webapp2.RequestHandler):
             self.redirect("/")
             return
 
-        r_subject = self.request.get("subject")
-        r_day = self.request.get("day")
-        r_time = self.request.get("time")
-        r_price = self.request.get("price")
+        r_subject = self.request.get("whichsubject")
+        r_day = self.request.get("whichday")
+        r_time = self.request.get("whichtime")
+        r_price = self.request.get("whichprice")
         
 
         new_user = newuser.UserModel(
