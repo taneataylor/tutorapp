@@ -12,8 +12,10 @@ class MainHandler(webapp2.RequestHandler):
 		logging.info(users.create_login_url('/hometutor'))
 		logging.info(users.create_login_url('/homestudent'))
 		html_params = {
-        	"title": "Main Title",
-            "content": "Hello"
+        	##"title": "Main Title",
+            #"content": "Hello"
+            "html_login":users.create_login_url('/hometutor'),
+            "html_login2":users.create_login_url('/homestudent')
         }
 		
 		template = jinja_env.env.get_template('templates/tmpl.html')
