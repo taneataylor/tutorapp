@@ -36,7 +36,7 @@ class StudentMatchHandler(webapp2.RequestHandler):
         match_str = ""
         for match in matchedTutors:
             logging.info(match)
-            match_str += "<div> Tutors: " + str(match.whichsubject) + " " + str(match.whichday) + "Email: " + str(match.user_email) 
+            match_str += "<div> Tutors Email: " + str(match.whichsubject) + " " + str(match.whichday)  + str(match.user_email) 
             match_str+= "</div>"
 
         template = jinja_env.env.get_template('templates/studentmatch.html')

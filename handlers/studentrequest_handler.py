@@ -10,9 +10,7 @@ from models import newuser
 class StudentRequestHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
-<<<<<<< HEAD
 
-=======
         if user == None: #if they are not logged in 
             self.redirect(users.create_login_url('/signup'))
             return
@@ -20,7 +18,7 @@ class StudentRequestHandler(webapp2.RequestHandler):
         if user != None: #asks python if the user signed in currently already has an account
             self.redirect("/find")
             return
->>>>>>> b20a198a99208bfc4b314c4dbf9803ae7b046368
+
         template = jinja_env.env.get_template('templates/studentrequest.html')
         self.response.out.write(template.render())
     def post(self):
@@ -29,10 +27,10 @@ class StudentRequestHandler(webapp2.RequestHandler):
             self.redirect("/")
             return
 
-        r_subject = self.request.get("subject")
-        r_day = self.request.get("day")
-        r_time = self.request.get("time")
-        r_price = self.request.get("price")
+        r_subject = self.request.get("whichsubject")
+        r_day = self.request.get("whichday")
+        r_time = self.request.get("whichtime")
+        r_price = self.request.get("whichprice")
         
 
         new_user = newuser.UserModel(
